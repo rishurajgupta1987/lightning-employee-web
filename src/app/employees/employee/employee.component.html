@@ -1,0 +1,84 @@
+<div class="success" *ngIf="showSuccessMsg">Success! New Employee is Registered!</div>
+<div class="Warning" *ngIf="showWarningMsg">Warning! Java Service is not Active!</div>
+
+
+<div class="title">
+  New Employee Resigtration Form:
+</div>
+
+<div class="block">
+  <form class="employee-form" [formGroup]="employeeForm" (ngSubmit)="saveEmployeeRerord()" novalidate>
+    <mat-form-field class="employee-form-full-width">
+      <input matInput placeholder="First Name" class="input-type-text" formControlName="empFirstName">
+      <mat-error *ngIf="employeeForm.controls['empFirstName'].hasError('pattern')">
+        Please enter a valid first name.
+      </mat-error>
+      <mat-error *ngIf="employeeForm.controls['empFirstName'].hasError('required')">
+        First Name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="employee-form-full-width">
+      <input matInput placeholder="Last Name" class="input-type-text" formControlName="empLastName">
+      <mat-error *ngIf="employeeForm.controls['empLastName'].hasError('pattern')">
+        Please enter a valid last name.
+      </mat-error>
+      <mat-error *ngIf="employeeForm.controls['empLastName'].hasError('required')">
+        Last Name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <div>
+      <mat-radio-group formControlName="empGender">
+        <label class="gender">Gender: </label>
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="empDOB">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <mat-label>Department</mat-label>
+      <mat-select formControlName="empDepartment">
+        <mat-option *ngFor="let department of departments" [value]="department.value">
+          {{department.viewValue}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="employeeForm.controls['empDepartment'].hasError('required')">
+        Department is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <div class="example-button-row" align="right">
+      <button type="submit" mat-raised-button color="primary" [disabled]="!employeeForm.valid">Submit</button>
+      <button type="button" mat-raised-button color="danger" (click)="clearData();">Reset</button>
+    </div>
+
+  </form>
+</div>
+
+
+
+<div class="title">
+  Employees are Currently Resigtered:
+</div>
+<div class="row employeetable-con">
+  <table id="employeetable" class="display">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>DOB</th>
+        <th>Department</th>
+      </tr>
+    </thead>
+  </table>
+</div>

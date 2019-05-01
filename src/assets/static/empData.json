@@ -1,0 +1,23 @@
+[
+    {
+        "firstName": "Rishu",
+        "lastName": "Gupta",
+        "gender": "Male",
+        "dob": "30/04/2019",
+        "department": "ERT"
+    },
+    {
+        "firstName": "Anish",
+        "lastName": "Gupta",
+        "gender": "Male",
+        "dob": "30/04/2019",
+        "department": "ERT"
+    },
+    {
+        "firstName": "Utkarsh",
+        "lastName": "Gupta",
+        "gender": "Male",
+        "dob": "30/04/2019",
+        "department": "ERT"
+    }
+]

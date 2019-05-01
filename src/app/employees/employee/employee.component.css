@@ -1,0 +1,83 @@
+
+.employee-form {
+    width: 50%;
+    font-family: SourceSansPro-Regular;
+    color: #ffffff;
+}
+
+.title {
+    font-family: SourceSansPro-Regular;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.employee-form-full-width {
+    width: 100%;
+}
+
+.block {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.mat-form-field {
+    display: block;
+    position: relative;
+    text-align: left;
+    font-family: SourceSansPro-Regular;
+    margin-top: 5px;
+}
+
+.mat-raised-button {
+    margin-left: 10px;
+}
+
+.mat-radio-button {
+    margin-left: 10px;
+}
+
+.gender {
+    font-family: SourceSansPro-Regular;
+    font-size: 15px;
+}
+
+.mat-datepicker-content {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.mat-error {
+    font-size: 13px;
+}
+
+.employeetable-con {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 65%;
+}
+
+th {
+    color: #ffffff !important;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+    padding: 10px 10px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.success{
+    font-family: SourceSansPro-Regular;
+    font-size: 15px;
+    background: #00cc00;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.Warning{
+    font-family: SourceSansPro-Regular;
+    font-size: 15px;
+    background: #ff3300;
+    color: #ffffff;
+    padding: 10px;
+}
